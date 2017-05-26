@@ -63,7 +63,12 @@
         <section id="extras" class="body">
         {% if LINKS %}
                 <div class="blogroll">
-                        
+                        <h2>Mantente informado</h2>
+                        <ul>
+                        {% for name, link in LINKS %}
+                            <li><a href="{{ link }}">{{ name }}</a></li>
+                        {% endfor %}
+                        </ul>
                 </div><!-- /.blogroll -->
         {% endif %}
         {% if SOCIAL or FEED_ALL_ATOM or FEED_ALL_RSS %}
